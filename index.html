@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caterina Puca — Personal Website</title>
+    <meta name="description" content="Personal landing page for Caterina Puca, a quantum computing expert at the intersection of research and business development.">
+    <meta name="author" content="Caterina Puca" />
+
+    <link rel="icon" href="./favicon.ico" sizes="any">
+
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:title" content="Caterina Puca — Personal Website">
+    <meta name="twitter:title" content="Caterina Puca — Personal Website">
+    <meta property="og:description" content="Personal landing page for Caterina Puca, a quantum computing expert at the intersection of research and business development.">
+    <meta name="twitter:description" content="Personal landing page for Caterina Puca, a quantum computing expert at the intersection of research and business development.">
+    <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/025ef3f0-0c4f-4c95-a012-aae1dc80f2fe?Expires=1771592517&amp;GoogleAccessId=go-api-on-aws%40gpt-engineer-390607.iam.gserviceaccount.com&amp;Signature=kvaiU8I4X4rcCm4%2F%2B3lfcXgGIV7cuY4%2Fa34Xz0fAgY%2FZyfYTVhTgbKa93uDm02Y0fFCUnSPqsOQVZPFjkePe64UFCz1lh5k9JY8Fnf%2F5suonRcg%2FJQ10PyzCdekDhNlMZdRkdzwou5ZGBbuzY0971HASC0VlnMKqbYwcwCuUnOY9jgbXhqN5wNjQrJDSnk9anmY4852E24wRfNWrLzVZHwonEyXVCX0tJT29azPBf5u02Z%2B2wFwvnJ17KSjn4zTo9LeRRyohIuj%2B1HeDZIrWkI7KtoRRuoF%2FjJVpIXMvBxMyJqAhRQMaTUqm3wQKV75KLbal5GCjd0O6R0mjLH%2BNsw%3D%3D">
+    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/025ef3f0-0c4f-4c95-a012-aae1dc80f2fe?Expires=1771592517&amp;GoogleAccessId=go-api-on-aws%40gpt-engineer-390607.iam.gserviceaccount.com&amp;Signature=kvaiU8I4X4rcCm4%2F%2B3lfcXgGIV7cuY4%2Fa34Xz0fAgY%2FZyfYTVhTgbKa93uDm02Y0fFCUnSPqsOQVZPFjkePe64UFCz1lh5k9JY8Fnf%2F5suonRcg%2FJQ10PyzCdekDhNlMZdRkdzwou5ZGBbuzY0971HASC0VlnMKqbYwcwCuUnOY9jgbXhqN5wNjQrJDSnk9anmY4852E24wRfNWrLzVZHwonEyXVCX0tJT29azPBf5u02Z%2B2wFwvnJ17KSjn4zTo9LeRRyohIuj%2B1HeDZIrWkI7KtoRRuoF%2FjJVpIXMvBxMyJqAhRQMaTUqm3wQKV75KLbal5GCjd0O6R0mjLH%2BNsw%3D%3D">
+
+    <!-- Apply the stored theme before first paint so there is no flash. -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var dark = stored ? stored === "dark" : true;
+          document.documentElement.classList.toggle("dark", dark);
+        } catch (e) { /* localStorage unavailable — keep the default dark theme */ }
+      })();
+    </script>
+
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+
+  <body>
+    <!-- ══ SVG icon sprite ══ -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <g id="i-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></g>
+        <g id="i-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></g>
+        <g id="i-book-open"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></g>
+        <g id="i-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></g>
+        <g id="i-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></g>
+        <g id="i-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></g>
+        <g id="i-newspaper"><path d="M15 18h-5"/><path d="M18 14h-8"/><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2"/><rect width="8" height="4" x="10" y="6" rx="1"/></g>
+        <g id="i-arrow-left-right"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></g>
+        <g id="i-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></g>
+        <g id="i-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></g>
+        <g id="i-chevron-right"><path d="m9 18 6-6-6-6"/></g>
+        <g id="i-chevron-left"><path d="m15 18-6-6 6-6"/></g>
+        <g id="i-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></g>
+      </defs>
+    </svg>
+
+    <main>
+      <!-- ══ THEME TOGGLE ══ -->
+      <div class="theme-toggle">
+        <svg class="icon icon--md icon-sun" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-sun"/></svg>
+        <button type="button" class="switch" id="theme-switch" role="switch" aria-checked="true" aria-label="Toggle day/night mode">
+          <span class="switch__thumb"></span>
+        </button>
+        <svg class="icon icon--md icon-moon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-moon"/></svg>
+      </div>
+
+      <!-- ══ HERO ══ -->
+      <div class="hero">
+        <div class="hero__inner">
+          <div class="hero__photo-wrap">
+            <img class="hero__photo" src="./assets/profile-caterina.jpeg" alt="Caterina Puca" width="224" height="224">
+          </div>
+          <p class="hero__eyebrow">Social Interpreter</p>
+          <h1 class="hero__name">Caterina Puca</h1>
+          <p class="hero__tagline">
+            I speak both <span class="dev">developer</span> and <span class="manager">manager</span> — and I translate between them in real time, bringing friction to zero.
+          </p>
+        </div>
+      </div>
+
+      <!-- Spacer for the fixed hero -->
+      <div class="hero-spacer"></div>
+
+      <!-- ══ FEATURED IN — logo marquee ══ -->
+      <div class="featured">
+        <p class="featured__label">My work has been featured in</p>
+        <div class="marquee">
+          <div class="marquee__fade marquee__fade--left"></div>
+          <div class="marquee__fade marquee__fade--right"></div>
+          <div class="marquee__track">
+            <!-- copy 1 -->
+            <div class="marquee__group">
+              <div class="logo-slot logo-slot--themed">
+                <img src="./assets/logo-guardian.png" alt="The Guardian" style="max-width:160px;height:40px">
+              </div>
+              <div class="logo-slot">
+                <img src="./assets/logo-physics-world.png" alt="Physics World" style="max-width:200px;height:40px">
+              </div>
+              <div class="logo-slot logo-slot--themed" style="margin-left:32px">
+                <img src="./assets/logo-royal-institution.svg" alt="The Royal Institution" style="max-width:240px;height:56px">
+              </div>
+              <div class="logo-slot logo-slot--themed">
+                <img src="./assets/logo-quantum-insider.svg" alt="The Quantum Insider" style="max-width:220px;height:40px">
+              </div>
+              <!-- KNUST — crest in full colour, text in theme foreground -->
+              <div class="logo-knust">
+                <!-- Clip to show only the crest (left ~38% of the PNG) -->
+                <div class="logo-knust__crest"><img src="./assets/logo-knust.png" alt=""></div>
+                <div class="logo-knust__text">
+                  <div class="logo-knust__name">KNUST</div>
+                  <div class="logo-knust__sub logo-knust__sub--first">KWAME NKRUMAH UNIVERSITY</div>
+                  <div class="logo-knust__sub">OF SCIENCE AND TECHNOLOGY</div>
+                </div>
+              </div>
+            </div>
+            <!-- copy 2 (duplicate, keeps the marquee seamless) -->
+            <div class="marquee__group" aria-hidden="true">
+              <div class="logo-slot logo-slot--themed">
+                <img src="./assets/logo-guardian.png" alt="" style="max-width:160px;height:40px">
+              </div>
+              <div class="logo-slot">
+                <img src="./assets/logo-physics-world.png" alt="" style="max-width:200px;height:40px">
+              </div>
+              <div class="logo-slot logo-slot--themed" style="margin-left:32px">
+                <img src="./assets/logo-royal-institution.svg" alt="" style="max-width:240px;height:56px">
+              </div>
+              <div class="logo-slot logo-slot--themed">
+                <img src="./assets/logo-quantum-insider.svg" alt="" style="max-width:220px;height:40px">
+              </div>
+              <div class="logo-knust">
+                <div class="logo-knust__crest"><img src="./assets/logo-knust.png" alt=""></div>
+                <div class="logo-knust__text">
+                  <div class="logo-knust__name">KNUST</div>
+                  <div class="logo-knust__sub logo-knust__sub--first">KWAME NKRUMAH UNIVERSITY</div>
+                  <div class="logo-knust__sub">OF SCIENCE AND TECHNOLOGY</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ WHAT IS A SOCIAL INTERPRETER ══ -->
+      <div class="section section--image">
+        <div class="section__bg" style="background-image:url('./assets/frontier-dinner-2.jpg')"></div>
+        <div class="section__overlay"></div>
+        <div class="section__inner">
+          <div class="fade-in">
+            <section class="intro">
+              <h2>What is a Social Interpreter?</h2>
+              <p>
+                Most organisations lose time, money, and momentum in the gap between technical teams and leadership. A Social Interpreter lives in both worlds — fluent in algorithms and architecture, equally fluent in strategy and business outcomes. I don't just relay messages: I reconstruct meaning across mindsets, so decisions get made faster, priorities align, and nothing gets lost in translation.
+              </p>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ THE TRANSLATION TABLE ══ -->
+      <div class="section">
+        <div class="section__inner">
+          <section>
+            <div class="fade-in">
+              <div class="section-heading value-heading">
+                <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-left-right"/></svg>
+                <h2>My Value Proposition</h2>
+              </div>
+              <p class="value-sub">Real-world examples of how I reduce friction across different environments</p>
+            </div>
+
+            <!-- Column headers -->
+            <div class="fade-in">
+              <div class="translation-grid translation-heads">
+                <div class="translation-heads__left"><span class="pill pill--dev">Developer</span></div>
+                <div class="translation-heads__gap"></div>
+                <div><span class="pill pill--manager">Manager</span></div>
+              </div>
+            </div>
+
+            <div class="translation-rows">
+              <div class="fade-in" style="transition-delay:80ms">
+                <div class="translation-grid">
+                  <div class="translation-cell translation-cell--dev"><p>We need to refactor the auth service — it's a security liability and the tech debt is compounding.</p></div>
+                  <div class="translation-arrow"><svg class="icon icon--base" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-left-right"/></svg></div>
+                  <div class="translation-cell translation-cell--manager"><p>Login is a compliance risk right now. If we fix it this sprint, we avoid a costly incident later.</p></div>
+                </div>
+              </div>
+              <div class="fade-in" style="transition-delay:160ms">
+                <div class="translation-grid">
+                  <div class="translation-cell translation-cell--dev"><p>The new quantum pipeline reduces circuit depth by 40% using ZX-calculus optimisations.</p></div>
+                  <div class="translation-arrow"><svg class="icon icon--base" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-left-right"/></svg></div>
+                  <div class="translation-cell translation-cell--manager"><p>We cut processing time nearly in half — that's a competitive edge we can put in the pitch deck.</p></div>
+                </div>
+              </div>
+              <div class="fade-in" style="transition-delay:240ms">
+                <div class="translation-grid">
+                  <div class="translation-cell translation-cell--dev"><p>We can't ship this without integration tests — the surface area for regressions is too large.</p></div>
+                  <div class="translation-arrow"><svg class="icon icon--base" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-left-right"/></svg></div>
+                  <div class="translation-cell translation-cell--manager"><p>Without this step, we risk a public failure at launch. A week now saves a month of firefighting.</p></div>
+                </div>
+              </div>
+              <div class="fade-in" style="transition-delay:320ms">
+                <div class="translation-grid">
+                  <div class="translation-cell translation-cell--dev"><p>Category-theoretic composition lets us build modular, provably correct abstractions.</p></div>
+                  <div class="translation-arrow"><svg class="icon icon--base" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-left-right"/></svg></div>
+                  <div class="translation-cell translation-cell--manager"><p>We can reuse components across projects with guaranteed reliability — lower cost, faster delivery.</p></div>
+                </div>
+              </div>
+              <div class="fade-in" style="transition-delay:400ms">
+                <div class="translation-grid">
+                  <div class="translation-cell translation-cell--dev"><p>Our post-quantum cryptography implementation uses lattice-based key encapsulation — NIST-standardised, future-proof against quantum attacks.</p></div>
+                  <div class="translation-arrow"><svg class="icon icon--base" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-arrow-left-right"/></svg></div>
+                  <div class="translation-cell translation-cell--manager"><p>This puts us ahead of incoming EU and US quantum-security mandates — a direct conversation starter with regulators and a policy differentiator.</p></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- ══ PHOTOS ══ -->
+      <div class="section">
+        <div class="section__inner">
+          <section>
+            <div class="grid-2">
+              <div class="fade-in" style="transition-delay:100ms">
+                <div class="photo-frame">
+                  <img src="./assets/frontier-dinner-1.jpg" alt="Caterina Puca at the Frontier Tech Dinner" loading="lazy">
+                </div>
+              </div>
+              <div class="fade-in" style="transition-delay:200ms">
+                <div class="photo-frame">
+                  <img src="./assets/frontier-dinner-2.jpg" alt="Caterina Puca leading a discussion at the Frontier Tech Dinner" loading="lazy">
+                </div>
+              </div>
+            </div>
+            <p class="photo-caption">Frontier Tech Dinner 2026 — House of Commons, London</p>
+          </section>
+        </div>
+      </div>
+
+      <!-- ══ ORIGIN STORY ══ -->
+      <div class="section">
+        <div class="section__inner">
+          <section class="origin">
+            <div class="fade-in">
+              <div class="origin__header">
+                <h2>How I Got Here</h2>
+                <p class="origin__hint">Use the arrows or swipe to navigate</p>
+              </div>
+            </div>
+
+            <!-- Card area -->
+            <div class="origin__stage acc-teal" id="origin-stage">
+              <!-- Navigation row — above the card -->
+              <div class="origin__nav">
+                <button type="button" class="origin__btn origin__btn--prev" id="origin-prev" disabled>
+                  <svg class="icon icon--base" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron-left"/></svg>
+                  Previous
+                </button>
+
+                <!-- Progress dots -->
+                <div class="origin__dots" id="origin-dots">
+                  <button type="button" class="origin__dot acc-teal is-current"  data-index="0" aria-label="Go to Before it began"></button>
+                  <button type="button" class="origin__dot acc-primary"          data-index="1" aria-label="Go to Day one"></button>
+                  <button type="button" class="origin__dot acc-primary"          data-index="2" aria-label="Go to Going deeper"></button>
+                  <button type="button" class="origin__dot acc-warm"             data-index="3" aria-label="Go to The pattern I noticed"></button>
+                  <button type="button" class="origin__dot acc-rose"             data-index="4" aria-label="Go to The shift"></button>
+                  <button type="button" class="origin__dot acc-accent"           data-index="5" aria-label="Go to Today"></button>
+                </div>
+
+                <!-- Next / finish -->
+                <button type="button" class="origin__btn origin__btn--next" id="origin-next">
+                  Next
+                  <svg class="icon icon--base" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chevron-right"/></svg>
+                </button>
+                <span class="origin__done" id="origin-done" hidden>That&apos;s the story ✦</span>
+              </div>
+
+              <!-- Cards — fixed min-height so buttons never shift -->
+              <div class="origin__card acc-teal" data-step="0">
+                <div class="origin__card-top">
+                  <div class="origin__icon">◎</div>
+                  <span class="origin__tag">Before it began</span>
+                  <span class="origin__counter">1 / 6</span>
+                </div>
+                <h3 class="origin__title">Not your typical science kid</h3>
+                <p class="origin__body">I never saw myself as a future scientist. For a while I even convinced myself I wanted to study chemistry. What fascinated me wasn't formulas — it was the hidden machinery of the world. Things like DNA quietly correcting its own errors while life keeps moving. That idea of invisible processes running in parallel stuck with me.</p>
+              </div>
+
+              <div class="origin__card acc-primary" data-step="1" hidden>
+                <div class="origin__card-top">
+                  <div class="origin__icon">∑</div>
+                  <span class="origin__tag">Day one</span>
+                  <span class="origin__counter">2 / 6</span>
+                </div>
+                <h3 class="origin__title">The axioms of the real numbers</h3>
+                <div class="origin__hook">
+                  <p>Then, on my first day at university, something unexpected caught my eye.</p>
+                </div>
+                <p class="origin__body">I suddenly realised mathematics wasn't really about numbers at all — it was about structure. The rules themselves could be defined, reshaped, and explored. Numbers behaved the way they did because of the system behind them. I wasn't interested in calculating; I was fascinated by the architecture underneath.</p>
+              </div>
+
+              <div class="origin__card acc-primary" data-step="2" hidden>
+                <div class="origin__card-top">
+                  <div class="origin__icon">∘</div>
+                  <span class="origin__tag">Going deeper</span>
+                  <span class="origin__counter">3 / 6</span>
+                </div>
+                <h3 class="origin__title">Increasingly meta</h3>
+                <p class="origin__body">That curiosity carried me into pure mathematics and toward increasingly "meta" questions — how ideas connect, organise, and scale. By the end of my master's — a little burnt out but still curious — I wanted to experience life as a researcher and see how far this structural lens could go.</p>
+              </div>
+
+              <div class="origin__card acc-warm" data-step="3" hidden>
+                <div class="origin__card-top">
+                  <div class="origin__icon">⚠</div>
+                  <span class="origin__tag">The pattern I noticed</span>
+                  <span class="origin__counter">4 / 6</span>
+                </div>
+                <h3 class="origin__title">The gap nobody talks about</h3>
+                <p class="origin__body">Research taught me something important: what feels deeply relevant inside a niche is often invisible to the rest of the world. That's not a flaw — unique and peculiar interests are exactly what draw people into research. But in professional environments, this gap creates real friction. Many problems didn't come from technical difficulty itself, but from a detachment between what researchers see as important and what organisations actually need.</p>
+              </div>
+
+              <div class="origin__card acc-rose" data-step="4" hidden>
+                <div class="origin__card-top">
+                  <div class="origin__icon">⚛</div>
+                  <span class="origin__tag">The shift</span>
+                  <span class="origin__counter">5 / 6</span>
+                </div>
+                <h3 class="origin__title">From structure in systems to structure between people</h3>
+                <p class="origin__body">I became interested not only in structure within systems, but in structuring understanding between people — translating between technical and non-technical perspectives, and between innovation and the environments where it needs to land. That pulled me beyond academia into deep-tech, starting in the quantum sector and evolving into strategic and ecosystem roles.</p>
+              </div>
+
+              <div class="origin__card acc-accent" data-step="5" hidden>
+                <div class="origin__card-top">
+                  <div class="origin__icon">↔</div>
+                  <span class="origin__tag">Today</span>
+                  <span class="origin__counter">6 / 6</span>
+                </div>
+                <h3 class="origin__title">Same motivation, different scale</h3>
+                <p class="origin__body">I still follow the same instinct that first drew me to mathematics: finding the structure underneath complexity — and translating it into shared understanding, aligned stakeholders, and decisions that actually move things forward.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- ══ TALKS, MEDIA & OUTREACH ══ -->
+      <div class="section">
+        <div class="section__inner">
+          <section>
+            <div class="fade-in">
+              <div class="section-heading talks-heading">
+                <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-newspaper"/></svg>
+                <h2>Talks, Media &amp; Outreach</h2>
+              </div>
+            </div>
+            <div class="grid-3">
+              <div class="fade-in">
+                <div class="card card--flex">
+                  <span class="talk__type">Committee</span>
+                  <p class="talk__event">World Tech Conference 2026</p>
+                  <p class="talk__role">Scientific Steering Committee Member</p>
+                  <div class="talk__links">
+                    <a class="talk__link" href="https://worldtechconference.ai/" target="_blank" rel="noopener noreferrer">
+                      <svg class="icon icon--xs" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-external-link"/></svg>Event website
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="fade-in" style="transition-delay:80ms">
+                <div class="card card--flex">
+                  <span class="talk__type">Panel</span>
+                  <p class="talk__event">Quantum Computing Summit 2025, Milan</p>
+                  <p class="talk__role">Panelist — HPC, Quantum &amp; AI Roundtable</p>
+                  <div class="talk__links">
+                    <a class="talk__link" href="https://www.theinnovationgroup.it/events/" target="_blank" rel="noopener noreferrer">
+                      <svg class="icon icon--xs" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-external-link"/></svg>Event website
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="fade-in" style="transition-delay:160ms">
+                <div class="card card--flex">
+                  <span class="talk__type">Keynote</span>
+                  <p class="talk__event">Hellenic Mathematical Society Conference 2025, Thessaloniki</p>
+                  <p class="talk__role">Keynote Speaker</p>
+                  <div class="talk__links">
+                    <a class="talk__link" href="https://15math2025.blogspot.com/p/2025.html" target="_blank" rel="noopener noreferrer">
+                      <svg class="icon icon--xs" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-external-link"/></svg>Conference website
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="fade-in" style="transition-delay:240ms">
+                <div class="card card--flex">
+                  <span class="talk__type">Invited Guest</span>
+                  <p class="talk__event">Stati Generali Quantum, Rome 2025</p>
+                  <p class="talk__role">Invited Guest</p>
+                  <div class="talk__links">
+                    <a class="talk__link" href="https://www.youtube.com/watch?v=3UOjOiP-P5I" target="_blank" rel="noopener noreferrer">
+                      <svg class="icon icon--xs" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-external-link"/></svg>Watch on YouTube
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="fade-in" style="transition-delay:320ms">
+                <div class="card card--flex">
+                  <span class="talk__type">Talk</span>
+                  <p class="talk__event">Applied Category Theory (ACT) 2023, Maryland</p>
+                  <p class="talk__role">Speaker</p>
+                  <div class="talk__links">
+                    <a class="talk__link" href="https://act2023.github.io/" target="_blank" rel="noopener noreferrer">
+                      <svg class="icon icon--xs" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-external-link"/></svg>Conference website
+                    </a>
+                    <a class="talk__link" href="https://act2023.github.io/papers.html" target="_blank" rel="noopener noreferrer">
+                      <svg class="icon icon--xs" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-external-link"/></svg>Papers &amp; talks
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="fade-in" style="transition-delay:400ms">
+                <div class="card card--flex">
+                  <span class="talk__type">Talk</span>
+                  <p class="talk__event">Categorical Approaches Workshop, Oxford 2023</p>
+                  <p class="talk__role">Speaker</p>
+                  <div class="talk__links">
+                    <a class="talk__link" href="https://bmbumpus.com/2023/12/08/how-naive-dynamic-programming-can-fail-initiating-a-systematic-study-of-obstructions-to-algorithmic-compositionality-through-the-lens-of-cohomology/" target="_blank" rel="noopener noreferrer">
+                      <svg class="icon icon--xs" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-external-link"/></svg>Blogpost
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="fade-in" style="transition-delay:480ms">
+                <div class="card card--flex">
+                  <span class="talk__type">Talk</span>
+                  <p class="talk__event">Applied Category Theory (ACT) 2022, Glasgow</p>
+                  <p class="talk__role">Speaker</p>
+                  <div class="talk__links">
+                    <a class="talk__link" href="https://msp.cis.strath.ac.uk/act2022/" target="_blank" rel="noopener noreferrer">
+                      <svg class="icon icon--xs" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-external-link"/></svg>Conference website
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- ══ SKILLS + EDUCATION ══ -->
+      <div class="section">
+        <div class="section__inner">
+          <section class="grid-2">
+            <div class="fade-in">
+              <div class="panel">
+                <h2 class="skills__title">My Skillset</h2>
+                <p class="skills__sub">From quantum theory to boardroom strategy — tools I actively use on both sides</p>
+                <div class="skills__tags">
+                  <span class="tag tag--accent">Ecosystem Building</span>
+                  <span class="tag tag--teal">End-to-End Project Execution</span>
+                  <span class="tag tag--warm">Executive-Level Strategy</span>
+                  <span class="tag tag--primary">Cross-Functional Leadership</span>
+                  <span class="tag tag--rose">Data-Driven Optimisation</span>
+                  <span class="tag tag--accent">Partnership Development</span>
+                </div>
+              </div>
+            </div>
+            <div class="fade-in" style="transition-delay:100ms">
+              <div class="panel">
+                <div class="edu__header">
+                  <svg class="icon icon--base" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-graduation-cap"/></svg>
+                  <h2>Education</h2>
+                </div>
+                <div class="edu__list">
+                  <div>
+                    <p class="edu__degree">M.Sc. Mathematics</p>
+                    <p class="edu__institution">Sapienza University of Rome, 2019–2021</p>
+                    <p class="edu__note">Thesis on categorical models of meaning of natural language</p>
+                    <p class="edu__note">110/110</p>
+                  </div>
+                  <div>
+                    <p class="edu__degree">B.Sc. Mathematics</p>
+                    <p class="edu__institution">University of Naples Federico II, 2016–2019</p>
+                    <p class="edu__note">110/110 cum laude</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- ══ PUBLICATIONS ══ -->
+      <div class="section">
+        <div class="section__inner">
+          <section>
+            <div class="fade-in">
+              <div class="section-heading pubs-heading">
+                <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-book-open"/></svg>
+                <h2>Selected Publications</h2>
+              </div>
+            </div>
+            <div class="grid-2">
+              <div class="fade-in">
+                <div class="card">
+                  <p class="pub__title">
+                    <a href="https://doi.org/10.48550/arXiv.2504.01013" target="_blank" rel="noopener noreferrer">Making the quantum world accessible to young learners through Quantum Picturalism <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+                  </p>
+                  <p class="pub__venue"><em>arXiv preprint</em>, 2023</p>
+                </div>
+              </div>
+              <div class="fade-in" style="transition-delay:80ms">
+                <div class="card">
+                  <p class="pub__title">
+                    <a href="https://doi.org/10.1109/QCE57702.2023.20321" target="_blank" rel="noopener noreferrer">Quantum Picturalism: Learning Quantum Theory in High School <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+                  </p>
+                  <p class="pub__venue"><em>IEEE QCE 2023</em>, 2023</p>
+                </div>
+              </div>
+              <div class="fade-in" style="transition-delay:160ms">
+                <div class="card">
+                  <p class="pub__title">
+                    <a href="https://doi.org/10.4204/EPTCS.397.14" target="_blank" rel="noopener noreferrer">Obstructions to Compositionality <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+                  </p>
+                  <p class="pub__venue"><em>Proceedings ACT 2023, EPTCS 397</em>, 2023</p>
+                </div>
+              </div>
+              <div class="fade-in" style="transition-delay:240ms">
+                <div class="card">
+                  <p class="pub__title">
+                    <a href="https://oxford24.github.io/assets/act-papers/20_how_nice_is_this_functor_two_s.pdf" target="_blank" rel="noopener noreferrer">How Nice is this Functor? Two Squares and Some Homology go a Long Way <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+                  </p>
+                  <p class="pub__venue"><em>ACT 2024</em>, 2024</p>
+                </div>
+              </div>
+              <div class="fade-in" style="transition-delay:320ms">
+                <div class="card">
+                  <p class="pub__title">
+                    <a href="https://doi.org/10.4204/EPTCS.380.13" target="_blank" rel="noopener noreferrer">Fibrational linguistics (FibLang): Language acquisition <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-external-link"/></svg></a>
+                  </p>
+                  <p class="pub__venue"><em>Proceedings ACT 2022, EPTCS 380</em>, 2022</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- ══ CONTACT ══ -->
+      <div class="contact">
+        <div class="contact__card">
+          <div class="fade-in">
+            <div>
+              <div class="contact__header">
+                <svg class="icon icon--base" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>
+                <h2>Contact</h2>
+              </div>
+              <div class="contact__links">
+                <a class="contact__link" href="mailto:puca.caterina96@gmail.com">
+                  <svg class="icon icon--md" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-mail"/></svg>
+                  puca.caterina96@gmail.com
+                </a>
+                <a class="contact__link" href="https://www.linkedin.com/in/caterina-puca-593a42202" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon icon--md" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-linkedin"/></svg>
+                  LinkedIn
+                </a>
+                <a class="contact__link" id="cv-link" href="./CV_Puca.pdf" download>
+                  <svg class="icon icon--md" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-download"/></svg>
+                  Caterina Puca's CV
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ FOOTER ══ -->
+      <div class="site-footer">
+        <footer>
+          <p>© <span id="year">2026</span> Caterina Puca</p>
+        </footer>
+      </div>
+    </main>
+
+    <!-- ══ TOAST VIEWPORT ══ -->
+    <div class="toast-viewport" id="toast-viewport"></div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

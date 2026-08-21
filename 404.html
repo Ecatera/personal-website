@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 — Caterina Puca</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="./favicon.ico" sizes="any">
+
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var dark = stored ? stored === "dark" : true;
+          document.documentElement.classList.toggle("dark", dark);
+        } catch (e) { /* localStorage unavailable — keep the default dark theme */ }
+      })();
+    </script>
+
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+
+  <body>
+    <div class="notfound">
+      <div class="notfound__inner">
+        <h1 class="notfound__code">404</h1>
+        <p class="notfound__text">Oops! Page not found</p>
+        <a class="notfound__link" href="./">Return to Home</a>
+      </div>
+    </div>
+
+    <script>
+      console.error("404 Error: User attempted to access non-existent route:", window.location.pathname);
+    </script>
+  </body>
+</html>
